@@ -1,0 +1,82 @@
+defaults:
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
+
+url: https://beckmannklaus.com
+
+# Site settings
+title: Klaus Beckmann
+email: info@beckmannklaus.com
+description: "Personal Trainer / Fitness Coach aus Miesbach bei München in Deutschland"
+
+references:
+- name: Jesko Raffin
+  position: FIM CEV Moto 2 Champion 2014
+- name: Natalie Geisenberger
+  position: Deutsche Rennrodlerin
+- name: Christian Jürgens
+  position: 3 Sterne Koch
+- name: Bernd Herzsprung
+  position: Deutscher Filmschauspieler
+- name: Dominique Aegerter
+  position: Moto 2 WM Motorradrennfahrer
+- name: Andreas Estner
+  position: Formel 4 Rennfahrer
+- name: Benjamin Mazatis
+  position: Nachwuchs-Rennfahrer
+- name: Marcel Kaffenberger
+  position: Fussballspieler
+- name: Max Sandritter
+  position: ADAC GT Masters Rennfahrer
+- name: Savio Nsereko
+  position: Fussballspieler
+- name: Sebastian Mrowca
+  position: Fussballspieler
+- name: Emre Nefiz
+  position: Fussballspieler
+- name: Daniel Franziskus
+  position: Fussballspieler
+- name: Aias Aosman
+  position: Fussballspieler
+- name: Marco Hornschuh
+  position: Fussballspieler
+- name: Marcos Alvares
+  position: Fussballspieler
+- name: Benjamin Brand
+  position: Schiedsrichter
+- name: Jonas Folger
+  position: Rennfahrer
+- name: Marcel Schrötter
+  position: Rennfahrer
+- name: Sebastian Hertner
+  position: Fussballspieler
+- name: Gerrit Gohlke
+  position: Fussballspieler
+- name: Shania Steiner
+  position: Bikini Athletin
+- name: Maximilian Bauer
+  position: Fussballspieler
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: twitter
+    url: http://twitter.com/jekyllrb
+  - title: facebook
+    url:
+  - title: stack-overflow
+    url: http://stackoverflow.com/questions/tagged/jekyll
+  - title: bitbucket 
+    url: http://bitbucket.org/jekyll
+  - title: github
+    url: http://github.com/jekyll
+
+# Postal address (add as many lines as necessary)
+address:
+  - line: 3481 Melrose Place
+  - line: Beverly Hills, CA 90210
+
+# Build settings
+markdown: kramdown
+permalink: pretty
