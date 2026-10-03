@@ -1,47 +1,40 @@
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>
-    {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
-  </title>
-  <meta name="viewport" content="width=device-width" />
-  <meta name="description" content="{{ site.description }}" />
-  <link
-    rel="canonical"
-    href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
-  />
-
-  <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-  <link rel="stylesheet" href="{{ "/style.css" | prepend: site.baseurl }}">
-
-  <!-- Custom Fonts -->
-  <link rel="stylesheet" href="{{ "/css/font-awesome/css/font-awesome.min.css" |
-  prepend: site.baseurl }}">
-  <link
-    href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
-    rel="stylesheet"
-    type="text/css"
-  />
-  <link
-    href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
-    rel="stylesheet"
-    type="text/css"
-  />
-  <link
-    href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic"
-    rel="stylesheet"
-    type="text/css"
-  />
-  <link
-    href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700"
-    rel="stylesheet"
-    type="text/css"
-  />
-
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.documentElement.className = 'js';</script>
+  {% seo %}
+  <meta name="theme-color" content="#0B1620">
+  <link rel="preload" href="{{ '/assets/fonts/archivo-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/hanken-grotesk-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  {% if page.hero %}
+  <link rel="preload" as="image" fetchpriority="high" type="image/avif"
+    imagesrcset="{{ '/assets/img/hero-800.avif' | relative_url }} 800w, {{ '/assets/img/hero-1280.avif' | relative_url }} 1280w, {{ '/assets/img/hero-1920.avif' | relative_url }} 1920w"
+    imagesizes="100vw">
+  {% endif %}
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | relative_url }}">
+  {% if page.hero %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "{{ site.title }} – {{ site.tagline }}",
+    "description": {{ site.description | jsonify }},
+    "url": "{{ site.url }}/",
+    "image": "{{ page.image | absolute_url }}",
+    "telephone": "{{ site.contact.phone_link }}",
+    "email": "{{ site.contact.email }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ site.contact.street }}",
+      "postalCode": "{{ site.contact.postal_code }}",
+      "addressLocality": "{{ site.contact.city }}",
+      "addressRegion": "{{ site.contact.region }}",
+      "addressCountry": "DE"
+    },
+    "sameAs": ["{{ site.contact.facebook }}"]
+  }
+  </script>
+  {% endif %}
 </head>

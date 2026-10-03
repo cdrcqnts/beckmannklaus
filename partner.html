@@ -1,10 +1,12 @@
 ---
-title: Klaus Beckmann -Partner
-layout: default
+title: Partner
+layout: page
 ---
-
-<div id="partner">
-  <div class="container">
-    {% include partner.html %} {% include footer.html %}
-  </div>
-</div>
+<ul class="partners">
+  {%- for p in site.data.partners %}
+  <li>
+    <a href="{{ p.url }}" rel="noopener">{{ p.name }} {% include icon.html name="external" %}</a>
+    <span>{{ p.text }}</span>
+  </li>
+  {%- endfor %}
+</ul>

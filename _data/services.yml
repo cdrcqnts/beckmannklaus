@@ -1,0 +1,38 @@
+# Leistungen on the home page. `image` names a set in assets/img
+# (<image>-480/800/1300.avif|jpg), generated from _source/img.
+- title: Speed Training
+  image: speed
+  alt: Klaus Beckmann beim Reaktionstraining mit Fit-Light-Sensoren
+  text: Optimierung der Reaktions- und Handlungsfähigkeit.
+  points:
+    - Reaktionsfähigkeit der schnell zuckenden Muskelfasern (Fast-Twitch)
+    - Fit-Light Training, um reaktive Wahrnehmung in explosive Handlungen umzusetzen
+    - Schneller laufen, als man kann – auf dem Hochgeschwindigkeitslaufband
+
+- title: Athletik Training
+  image: athletik
+  alt: Athletiktraining mit Zusatzgewicht
+  text: >-
+    Kraft, Kondition, Koordination, Beweglichkeit und Schnelligkeit – abgestimmt
+    auf den Athleten, um im Wettkampf belastbarer und erfolgreicher zu sein.
+  points:
+    - Kraft
+    - Kondition und Koordination
+    - Schnelligkeit
+
+- title: Ernährung
+  image: ernaehrung
+  alt: Frisch zubereitete, ausgewogene Sportlerernährung
+  text: >-
+    Holistische Ernährungskonzepte, abgestimmt auf die Leistungsanforderung.
+    Die richtige Ernährung im Leistungssport ist das Maß, um verletzungsfreier
+    und fit für alle Aufgaben zu sein.
+
+- title: Bootcamps
+  image: bootcamp
+  alt: Gruppentraining im Bootcamp
+  text: Internationale Trainingslager und Gruppentraining.
+  points:
+    - Gruppentraining mit variablen Übungen für den ganzen Körper
+    - Trainingslager zur Wettkampfvorbereitung nach militärischen Prinzipien
+    - Kraftausdauer – Durchhalten ist das Ziel

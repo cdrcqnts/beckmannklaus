@@ -1,0 +1,7 @@
+{
+  "name": "beckmannklaus-assets",
+  "private": true,
+  "type": "module",
+  "scripts": { "images": "node images.mjs" },
+  "devDependencies": { "sharp": "^0.35.0" }
+}

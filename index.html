@@ -1,11 +1,135 @@
 ---
-title: Klaus Beckmann - Personal Trainer
-layout: default
+title: Personal Trainer in Miesbach
+hero: true
 ---
+{%- assign featured = "" | split: "" -%}
+{%- assign total = 0 -%}
+{%- for g in site.data.references -%}
+  {%- assign total = total | plus: g.people.size -%}
+  {%- for p in g.people -%}{%- if p.featured -%}{%- assign featured = featured | push: p.name -%}{%- endif -%}{%- endfor -%}
+{%- endfor -%}
 
-<div class="home">
-  {% include nav.html %}{% include hero.html %} {% include coaching.html %} {%
-  include speed_training.html %} {% include athletik_training.html %} {% include
-  ernaehrung.html %} {% include bootcamp.html %} {% include referenzen.html %}
-  {% include kontakt.html %} {% include footer.html %} {% include js.html %}
-</div>
+<section class="hero" aria-labelledby="hero-title">
+  {% include picture.html name="hero" widths="800,1280,1920" sizes="100vw" width=1920 height=1080 class="hero__img" eager=true alt="" %}
+  <div class="container hero__content">
+    <p class="eyebrow eyebrow--signal">Personal Training · Miesbach &amp; Tegernsee</p>
+    <h1 id="hero-title" class="display hero__title">Schneller.<br>Stärker.<br>Belastbarer.</h1>
+    <p class="hero__lead">Athletik-, Speed- und Ernährungscoaching für Profisportler und alle, die wie Profis trainieren wollen.</p>
+    <div class="actions">
+      <a class="button button--primary" href="#kontakt">Erstgespräch anfragen {% include icon.html name="arrow" %}</a>
+      <a class="button button--ghost" href="tel:{{ site.contact.phone_link }}">{% include icon.html name="phone" %} {{ site.contact.phone }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="proof" aria-label="Athleten, die mit Klaus Beckmann trainieren">
+  <div class="container proof__inner">
+    <span class="eyebrow eyebrow--signal">Vertrauen von</span>
+    <ul class="proof__list">
+      {%- for name in featured %}
+      <li>{{ name }}</li>
+      {%- endfor %}
+    </ul>
+    <a class="proof__more" href="#referenzen">+ {{ total | minus: featured.size }} weitere</a>
+  </div>
+</section>
+
+<section id="leistungen" class="section">
+  <div class="container">
+    <div class="section__head section__head--split">
+      <div>
+        <p class="eyebrow">Leistungen</p>
+        <h2 class="display section__title">Vier Wege<br>zur Topform</h2>
+      </div>
+      <p class="section__intro">Jedes Programm wird individuell auf Sportart, Saisonphase und Ziel abgestimmt – im Studio, draußen oder im Trainingslager.</p>
+    </div>
+    <ol class="services">
+      {%- for s in site.data.services %}
+      <li class="service">
+        {% include picture.html name=s.image alt=s.alt sizes="(min-width: 1100px) 290px, (min-width: 640px) 50vw, 100vw" class="service__img" %}
+        <div class="service__body">
+          <span class="service__num">{{ forloop.index | prepend: "0" }}</span>
+          <h3 class="service__title">{{ s.title }}</h3>
+          <p>{{ s.text }}</p>
+          {%- if s.points %}
+          <ul class="service__points">
+            {%- for p in s.points %}
+            <li>{{ p }}</li>
+            {%- endfor %}
+          </ul>
+          {%- endif %}
+        </div>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+<section id="methode" class="section section--dark">
+  <div class="container split">
+    <div>
+      <p class="eyebrow eyebrow--signal">So arbeiten wir</p>
+      <h2 class="display section__title">Vom Gespräch<br>zum Wettkampf</h2>
+      <ol class="steps">
+        <li><span class="steps__num" aria-hidden="true">1</span><div><h3>Gespräch</h3><p>Wir klären Ziele, Sportart und Saisonplanung.</p></div></li>
+        <li><span class="steps__num" aria-hidden="true">2</span><div><h3>Plan</h3><p>Training und Ernährung werden individuell auf dich abgestimmt.</p></div></li>
+        <li><span class="steps__num" aria-hidden="true">3</span><div><h3>Training</h3><p>Einzeln oder in der Gruppe – im Studio, am Berg oder im Trainingslager.</p></div></li>
+      </ol>
+    </div>
+    {% include picture.html name="methode" widths="800,1300" sizes="(min-width: 960px) 580px, 100vw" class="split__img" alt="Sprinttraining auf dem Hochgeschwindigkeitslaufband" %}
+  </div>
+</section>
+
+<section id="referenzen" class="section">
+  <div class="container">
+    <p class="eyebrow">Referenzen</p>
+    <h2 class="display section__title">Athleten, die<br>mit mir trainieren</h2>
+    <div class="refs">
+      {%- for g in site.data.references %}
+      <div class="refs__group">
+        <h3 class="refs__title">{{ g.group }}</h3>
+        <ul>
+          {%- for p in g.people %}
+          <li><strong>{{ p.name }}</strong>{% if p.note %} <span>· {{ p.note }}</span>{% endif %}</li>
+          {%- endfor %}
+        </ul>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="kontakt" class="section section--signal">
+  <div class="container split split--top">
+    <div>
+      <h2 class="display contact__title">Bereit fürs<br>Training?</h2>
+      <p class="contact__lead">Schreib mir kurz, worum es geht – oder ruf direkt an.</p>
+      <ul class="contact__list">
+        <li><a href="tel:{{ site.contact.phone_link }}">{% include icon.html name="phone" %} {{ site.contact.phone }}</a></li>
+        <li><a href="mailto:{{ site.contact.email }}">{% include icon.html name="mail" %} {{ site.contact.email }}</a></li>
+        <li><span>{% include icon.html name="pin" %} {{ site.contact.city }}, Oberbayern</span></li>
+      </ul>
+    </div>
+    <form class="contact-form" action="mailto:{{ site.contact.email }}" method="post" enctype="text/plain" data-mailto="{{ site.contact.email }}">
+      <label>Name
+        <input type="text" name="name" autocomplete="name" required>
+      </label>
+      <label>E-Mail oder Telefon
+        <input type="text" name="kontakt" autocomplete="email" required>
+      </label>
+      <label>Worum geht es?
+        <select name="thema">
+          {%- for s in site.data.services %}
+          <option>{{ s.title }}</option>
+          {%- endfor %}
+          <option>Etwas anderes</option>
+        </select>
+      </label>
+      <label>Nachricht
+        <textarea name="nachricht" rows="4"></textarea>
+      </label>
+      <button class="button button--primary" type="submit">Anfrage per E-Mail senden {% include icon.html name="arrow" %}</button>
+      <p class="contact-form__note">Öffnet dein E-Mail-Programm mit der fertigen Nachricht. Es werden keine Daten über diese Website übertragen.</p>
+    </form>
+  </div>
+</section>

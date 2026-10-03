@@ -1,0 +1,50 @@
+# Referenzen, grouped by sport. `featured: true` also lists the name in the
+# strip below the hero.
+- group: Motorsport
+  people:
+    - name: Jesko Raffin
+      note: FIM CEV Moto2 Champion 2014
+      featured: true
+    - name: Dominique Aegerter
+      note: Moto2-WM
+      featured: true
+    - name: Jonas Folger
+      note: Motorradrennfahrer
+      featured: true
+    - name: Marcel Schrötter
+      note: Motorradrennfahrer
+    - name: Max Sandritter
+      note: ADAC GT Masters
+    - name: Andreas Estner
+      note: Formel 4
+    - name: Benjamin Mazatis
+      note: Nachwuchs-Rennfahrer
+
+- group: Fußball
+  people:
+    - name: Maximilian Bauer
+    - name: Sebastian Mrowca
+    - name: Marcel Kaffenberger
+    - name: Aias Aosman
+    - name: Savio Nsereko
+    - name: Sebastian Hertner
+    - name: Marco Hornschuh
+    - name: Marcos Alvares
+    - name: Emre Nefiz
+    - name: Daniel Franziskus
+    - name: Gerrit Gohlke
+
+- group: Wintersport & mehr
+  people:
+    - name: Natalie Geisenberger
+      note: Rennrodeln
+      featured: true
+    - name: Christian Jürgens
+      note: 3-Sterne-Koch
+      featured: true
+    - name: Bernd Herzsprung
+      note: Schauspieler
+    - name: Benjamin Brand
+      note: Schiedsrichter
+    - name: Shania Steiner
+      note: Bikini-Athletin

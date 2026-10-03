@@ -1,25 +1,11 @@
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <span class="copyright"
-          >Copyright &copy; {{ site.title }} {{ 'now' | date: "%Y" }}</span
-        >
-      </div>
-      <div class="col-md-4">
-        <!-- <ul class="list-inline social-buttons">
-                        {% for network in site.social %}
-                        <li><a href="{{ network.url }}"><i class="fa fa-{{ network.title }}"></i></a>
-                        </li>
-                        {% endfor %}
-                    </ul> -->
-      </div>
-      <div class="col-md-4">
-        <ul class="list-inline quicklinks">
-          <li><a href="{{site.baseurl}}/partner">Partner</a></li>
-          <li><a href="{{site.baseurl}}/impressum">Impressum</a></li>
-        </ul>
-      </div>
-    </div>
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <p>© <span data-year>{{ site.time | date: "%Y" }}</span> {{ site.title }} · {{ site.tagline }}</p>
+    <nav aria-label="Rechtliches und Links">
+      <a href="{{ '/partner/' | relative_url }}">Partner</a>
+      <a href="{{ '/impressum/' | relative_url }}">Impressum</a>
+      <a href="{{ '/datenschutz/' | relative_url }}">Datenschutz</a>
+      <a href="{{ site.contact.facebook }}" rel="noopener">Facebook</a>
+    </nav>
   </div>
 </footer>

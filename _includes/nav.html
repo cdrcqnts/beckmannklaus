@@ -1,45 +1,18 @@
-<!-- Navigation -->
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header page-scroll">
-      <button
-        type="button"
-        class="navbar-toggle"
-        data-toggle="collapse"
-        data-target="#bs-example-navbar-collapse-1"
-      >
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand page-scroll" href="#page-top">{{site.title}}</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li class="hidden">
-          <a href="#page-top"></a>
-        </li>
-        <li>
-          <a class="page-scroll" href="#coaching">Coaching</a>
-        </li>
-        <li>
-          <a class="page-scroll" href="#referenzen">Referenzen</a>
-        </li>
-        <li>
-          <a class="page-scroll" href="#kontakt">Kontakt</a>
-        </li>
-      </ul>
-    </div>
-    <!-- /.navbar-collapse -->
+<header class="site-nav">
+  <div class="container site-nav__inner">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <span class="brand__mark" aria-hidden="true">KB</span>
+      <span class="brand__name">{{ site.title }}</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hauptmenue">
+      {% include icon.html name="menu" %}<span class="visually-hidden">Menü</span>
+    </button>
+    <nav id="hauptmenue" class="site-nav__menu" aria-label="Hauptmenü">
+      <a href="{{ '/#leistungen' | relative_url }}">Leistungen</a>
+      <a href="{{ '/#methode' | relative_url }}">Methode</a>
+      <a href="{{ '/#referenzen' | relative_url }}">Referenzen</a>
+      <a href="{{ '/#kontakt' | relative_url }}">Kontakt</a>
+      <a class="button button--primary button--small" href="{{ '/#kontakt' | relative_url }}">Erstgespräch anfragen</a>
+    </nav>
   </div>
-  <!-- /.container-fluid -->
-</nav>
-<!--
-        {% for page in site.pages %}
-          {% if page.title %}<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>{% endif %}
-        {% endfor %}
- -->
+</header>
