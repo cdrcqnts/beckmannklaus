@@ -110,7 +110,8 @@ hero: true
         <li><span>{% include icon.html name="pin" %} {{ site.contact.city }}, Oberbayern</span></li>
       </ul>
     </div>
-    <form class="contact-form" action="mailto:{{ site.contact.email }}" method="post" enctype="text/plain" data-mailto="{{ site.contact.email }}">
+    <noscript><p class="contact-form__fallback">Schreib mir direkt an <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>.</p></noscript>
+    <form class="contact-form" data-mailto="{{ site.contact.email }}">
       <label>Name
         <input type="text" name="name" autocomplete="name" required>
       </label>

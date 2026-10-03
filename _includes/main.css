@@ -461,6 +461,10 @@ ul, ol { padding: 0; list-style: none; }
 .contact-form select:focus,
 .contact-form textarea:focus { border-color: var(--signal); outline: none; box-shadow: 0 0 0 2px var(--signal); }
 .contact-form__note { font-size: 0.875rem; color: var(--mist); }
+/* The form only works through main.js; without JS show the plain email link instead. */
+.no-js .contact-form { display: none; }
+.contact-form__fallback { padding: 32px; background: var(--ink); color: var(--paper); font-size: 1.125rem; }
+.contact-form__fallback a { color: var(--signal); }
 
 /* Content pages */
 .page { padding-block: clamp(56px, 8vw, 96px); }
