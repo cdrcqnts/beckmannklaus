@@ -11,7 +11,7 @@
     imagesrcset="{{ '/assets/img/hero-800.avif' | relative_url }} 800w, {{ '/assets/img/hero-1280.avif' | relative_url }} 1280w, {{ '/assets/img/hero-1920.avif' | relative_url }} 1920w"
     imagesizes="100vw">
   {% endif %}
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <style>{% include main.css %}</style>
   <link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
   <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | relative_url }}">
   {% if page.hero %}

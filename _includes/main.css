@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Archivo";
-  src: url("../fonts/archivo-latin.woff2") format("woff2");
+  src: url("/assets/fonts/archivo-latin.woff2") format("woff2");
   font-weight: 100 900;
   font-stretch: 62% 125%;
   font-style: normal;
@@ -10,7 +10,7 @@
 }
 @font-face {
   font-family: "Hanken Grotesk";
-  src: url("../fonts/hanken-grotesk-latin.woff2") format("woff2");
+  src: url("/assets/fonts/hanken-grotesk-latin.woff2") format("woff2");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -160,7 +160,7 @@ ul, ol { padding: 0; list-style: none; }
   background: var(--signal);
   color: var(--ink);
 }
-.brand__mark .discus { width: auto; height: 32px; }
+.brand__mark .discus { width: auto; height: 29px; }
 .brand__name {
   font-family: var(--font-display);
   font-stretch: 85%;

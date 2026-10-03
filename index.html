@@ -22,15 +22,15 @@ hero: true
   </div>
 </section>
 
-<section class="proof" aria-label="Athleten, die mit Klaus Beckmann trainieren">
+<section class="proof" aria-label="Ausgewählte Referenzen">
   <div class="container proof__inner">
-    <span class="eyebrow eyebrow--signal">Vertrauen von</span>
+    <span class="eyebrow eyebrow--signal">Ausgewählte Referenzen</span>
     <ul class="proof__list">
       {%- for name in featured %}
       <li>{{ name }}</li>
       {%- endfor %}
     </ul>
-    <a class="proof__more" href="#referenzen">+ {{ total | minus: featured.size }} weitere</a>
+    <a class="proof__more" href="#referenzen">Alle {{ total }} Referenzen</a>
   </div>
 </section>
 
@@ -83,7 +83,7 @@ hero: true
 <section id="referenzen" class="section">
   <div class="container">
     <p class="eyebrow">Referenzen</p>
-    <h2 class="display section__title">Athleten, die<br>mit mir trainieren</h2>
+    <h2 class="display section__title">Mit wem ich<br>gearbeitet habe</h2>
     <div class="refs">
       {%- for g in site.data.references %}
       <div class="refs__group">

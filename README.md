@@ -14,7 +14,7 @@ framework; fonts are self-hosted, so no third-party requests.
 | Partner | `_data/partners.yml` |
 | Impressum, Datenschutz | `impressum.md`, `datenschutz.md` |
 | Home page sections | `index.html` |
-| Styles / script | `assets/css/main.css`, `assets/js/main.js` |
+| Styles (inlined into every page) / script | `_includes/main.css`, `assets/js/main.js` |
 
 ## Images
 

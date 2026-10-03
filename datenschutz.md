@@ -20,7 +20,9 @@ Diese Website wird über GitHub Pages bereitgestellt, einen Dienst der GitHub, I
 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Beim Aufruf der Seiten
 verarbeitet GitHub technisch notwendige Daten (insbesondere IP-Adresse, Datum und
 Uhrzeit des Zugriffs, aufgerufene Seite, Browser-Informationen) in Server-Logfiles,
-um die Website auszuliefern und deren Sicherheit zu gewährleisten.
+um die Website auszuliefern und deren Sicherheit zu gewährleisten. Wir selbst
+haben auf diese Logfiles keinen Zugriff; Art und Dauer der Speicherung richten
+sich nach den Vorgaben von GitHub.
 
 Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; unser berechtigtes Interesse liegt
 in der sicheren und zuverlässigen Bereitstellung der Website. Dabei kann eine
@@ -51,3 +53,5 @@ Datenübertragbarkeit (Art. 20) und Widerspruch gegen Verarbeitungen auf Grundla
 von Art. 6 Abs. 1 lit. f DSGVO (Art. 21). Außerdem können Sie sich bei einer
 Datenschutz-Aufsichtsbehörde beschweren, zum Beispiel beim Bayerischen Landesamt
 für Datenschutzaufsicht (BayLDA), Promenade 18, 91522 Ansbach.
+
+Stand: Oktober 2026

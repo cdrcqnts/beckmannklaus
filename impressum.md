@@ -29,5 +29,3 @@ Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: DE…
 
 Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
 Verbraucherschlichtungsstelle teilzunehmen.
-
-Quelle: [e-recht24.de](https://www.e-recht24.de/impressum-generator.html)
